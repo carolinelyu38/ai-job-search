@@ -56,6 +56,29 @@ A hard filter, like the gates above. A posting matching any row is not scored an
 
 When company size is not stated, check headcount on LinkedIn before drafting rather than guessing.
 
+## Seniority Gate — run before scoring
+
+Set by the candidate on 2026-09-03, after reviewing a batch that skewed too senior.
+She has roughly **1-2 years of professional experience** and will not be shortlisted for
+mid-level roles no matter how well the responsibilities read.
+
+| Signal | Verdict |
+|---|---|
+| LinkedIn seniority **Entry level** / **Associate** / **Internship**; or titles containing Coordinator, Analyst, Associate, Junior, Specialist I, Consultant I, Level I, New Grad | **PASS** |
+| No years of experience stated anywhere in the posting | **PASS** — an unstated bar is an open one |
+| **1-3 years** stated | **PASS** |
+| **3-5 years** stated | **FAIL by default.** Only surface it when *both* hold: (a) she matches ~90% of the actual responsibilities, and (b) the required combination is genuinely rare, so the candidate pool is small. State the reasoning explicitly when recommending one. |
+| **5+ years**, Master's required, Senior / Lead / Principal / Staff / Manager / Director, or substantial people management | **FAIL — hard stop.** Do not surface, do not draft. |
+
+**Do not** reject on the word "Specialist" or "Consultant" alone — read the level from the
+body. Insight, for example, grades the same team as Consultant I and Consultant II, and only
+the body says which.
+
+**When a strong posting is too senior, look for its siblings.** Teams hire in cohorts: check
+the employer's own careers site for adjacent requisition numbers, which often include the
+junior seats on the same project. This found three Consultant I / II roles beside one
+Consultant posting that had looked like the only option.
+
 ## Language Gate — run before scoring
 
 This gate checks a posting's language requirements against what the candidate actually speaks. It is not one of the five Scoring Dimensions below - it runs before them, structured the same way as the Eligibility Gate above: read the posting, classify against profile data, and treat a hard mismatch as FAIL before scoring. Its verdict is tracked downstream: `/rank` records the result as `language_gate` (PASS/FAIL/FLAG) with a supporting `language_note`, persists both into `seen_jobs.json`, and treats a FAIL as a shortlist veto; `/scrape` surfaces the flag in its results table and carries a language-override rule for postings whose ad language differs from the role's working language. `/apply`'s language detection (Step 1, which extracts a posting's required language generically) feeds this same check.

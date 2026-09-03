@@ -102,6 +102,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Deal-breakers
 - **Small construction companies** - hard exclusion, regardless of pay or title
+- **Roles above her level** - approximately 1-2 years of experience. Anything stating 5+ years, a Master's requirement, or a Senior/Lead/Principal/Manager title is a hard exclusion; 3-5 year postings only when the responsibility match is near-total and the required skill combination is rare. See the Seniority Gate in `04-job-evaluation.md`.
 - Compensation below CAD 55,000 *(baseline for internal ranking only - never printed on a CV or cover letter, and never volunteered in an application)*
 
 ## Repo Structure
