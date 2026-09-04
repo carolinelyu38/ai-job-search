@@ -11,8 +11,13 @@ supply chain, procurement or planning.
     python3 tools/amazon_watch.py --all        # ignore the seen list, show everything matching
     python3 tools/amazon_watch.py --days 7     # only postings this recent (default 7)
 
-State lives in amazon_watch_seen.json beside the script's working directory and
-is gitignored, so a first run reports everything and later runs report deltas.
+Exit code is 0 when something worth reading turned up and 1 when nothing did,
+so the scheduled Routine can stay silent on a quiet morning.
+
+State lives in data/amazon_watch_state.json and is committed on purpose. The
+scheduled Routine that runs this script gets a fresh container each morning, so
+an ignored state file would reset daily and the evergreen Early Career postings
+would be re-reported forever.
 
 Note on the API: amazon.jobs ignores country[] on its own. Only
 normalized_state_name[] filters reliably, so the search runs province by
@@ -169,7 +174,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=7)
     ap.add_argument("--all", action="store_true", help="ignore the seen list")
-    ap.add_argument("--state", default="amazon_watch_seen.json")
+    ap.add_argument("--state", default="data/amazon_watch_state.json")
     args = ap.parse_args()
 
     seen = set()
@@ -229,9 +234,10 @@ def main() -> int:
         print("Nothing new that clears the level bar.")
 
     seen |= {j.get("job_path") for j in shortlist if j.get("job_path")}
+    os.makedirs(os.path.dirname(args.state) or ".", exist_ok=True)
     json.dump({"seen": sorted(p for p in seen if p),
                "last_run": today.isoformat()}, open(args.state, "w"), indent=1)
-    return 0
+    return 0 if (fits or stretches) else 1
 
 
 if __name__ == "__main__":
