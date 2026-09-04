@@ -15,6 +15,8 @@ the sentinels exist in the pristine files, and (c) that simulating the
 /setup edit destroys at least one checked sentinel per file - i.e. the
 guard actually fires on the failure it exists to catch.
 """
+import os
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -26,6 +28,42 @@ PROFILE = REPO / ".claude" / "skills" / "job-application-assistant" / "01-candid
 # The literal sentinel strings (unescaped) that ci.yml's grep patterns match.
 CV_SENTINELS = ["\\name{[First]}{[Last]}", "\\email{[your.email@example.com]}"]
 PROFILE_SENTINEL = "[YOUR_EMAIL]"
+
+UPSTREAM = "MadsLorentzen/ai-job-search"
+
+
+def is_upstream_template() -> bool:
+    """Mirror ci.yml's own condition on the placeholder-integrity job:
+    `if: github.repository == 'MadsLorentzen/ai-job-search'`.
+
+    The sentinels only exist in the unmodified template. A fork's whole
+    purpose is to replace them - /setup fills CLAUDE.md, the profile and
+    cv/main_example.tex - so asserting the pristine content there fails by
+    construction and says nothing about the fork's code. The workflow already
+    scopes the shell check this way; these content assertions were the half
+    that never got the same guard.
+
+    The assertions that pin ci.yml's grep patterns stay unconditional. They
+    are what guards the guard, and they hold in every checkout.
+    """
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    if repo:
+        return repo == UPSTREAM
+    try:
+        url = subprocess.run(
+            ["git", "-C", str(REPO), "remote", "get-url", "origin"],
+            capture_output=True, text=True, timeout=10,
+        ).stdout.strip()
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return url.removesuffix(".git").endswith(UPSTREAM)
+
+
+upstream_only = unittest.skipUnless(
+    is_upstream_template(),
+    "pristine-template assertion; this checkout is a personalized fork "
+    f"(ci.yml scopes the same check to {UPSTREAM})",
+)
 
 
 def personalize_cv(text: str) -> str:
@@ -58,10 +96,12 @@ class TestCvSentinelsAreDataLocated(unittest.TestCase):
             "ci.yml must assert the sentinel inside the \\email{} data line",
         )
 
+    @upstream_only
     def test_pristine_cv_carries_both_sentinels(self):
         for sentinel in CV_SENTINELS:
             self.assertIn(sentinel, self.cv)
 
+    @upstream_only
     def test_setup_edit_destroys_the_sentinels(self):
         personalized = personalize_cv(self.cv)
         self.assertNotEqual(personalized, self.cv, "the simulated /setup edit must change the file")
@@ -84,6 +124,7 @@ class TestProfileSentinelIsDataLocated(unittest.TestCase):
             "a header comment the model may leave untouched",
         )
 
+    @upstream_only
     def test_pristine_profile_carries_the_sentinel(self):
         self.assertIn(PROFILE_SENTINEL, PROFILE.read_text(encoding="utf-8"))
 
