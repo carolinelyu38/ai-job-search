@@ -122,3 +122,6 @@ applicant_answers.json
 
 # autoapply run artifacts
 application*.png
+
+# Amazon watch state (personal run history)
+amazon_watch_seen.json
