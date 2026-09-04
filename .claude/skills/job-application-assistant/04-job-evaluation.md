@@ -56,6 +56,34 @@ A hard filter, like the gates above. A posting matching any row is not scored an
 
 When company size is not stated, check headcount on LinkedIn before drafting rather than guessing.
 
+## Targeting Gate — run before scoring
+
+Set 2026-09-04 after reviewing 32 real applications and their outcomes from Gmail.
+
+**What the evidence showed.** Roughly 32 applications between 12 August and 4 September produced
+11 rejections and exactly **one** interview. The interview came from the single posting whose
+title named her actual differentiator — *AI Enablement Specialist* — where a recruiter reached
+out on LinkedIn about ninety minutes after she applied. Four of the eleven rejections were
+generic coordinator roles (Operations Coordinator, Provider Operations Coordinator, Business
+Support Coordinator, Construction Coordinator); two were roles above her level with Manager in
+the title; the rest were domain mismatches.
+
+**Conclusion: she wins on differentiation, not on volume.** In a generic coordinator pool she is
+one of several hundred business graduates with coordination experience and nothing separates her.
+In an AI enablement pool, the combination of live AI adoption work plus construction operations
+plus Mandarin is close to unique.
+
+| Posting type | Verdict |
+|---|---|
+| AI enablement, AI adoption, AI operations, digital transformation, technology adoption, change management, Copilot or M365 adoption, enablement, knowledge management for AI | **PRIORITY** — surface these first, always |
+| Business systems / implementation / technology PM where the JD names AI or automation | **PASS** |
+| Generic Operations Coordinator, Business Support Coordinator, Office Coordinator, Administrative Coordinator, Construction Coordinator, Project Coordinator with no technology or systems content | **FAIL by default.** High volume, no differentiation, demonstrated losses. Surface only if the JD carries a genuine systems, AI or transformation component. |
+| Anything with Manager in the title | See the Seniority Gate — hard stop |
+
+**ATS formatting is not the constraint.** Her applications parsed successfully through Workday,
+SuccessFactors, Greenhouse, Lever, Ashby, iCIMS and ADP, and one progressed to an Amazon online
+assessment. Do not attribute rejections to formatting.
+
 ## Seniority Gate — run before scoring
 
 Set by the candidate on 2026-09-03, after reviewing a batch that skewed too senior.
