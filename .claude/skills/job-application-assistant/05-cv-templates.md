@@ -25,6 +25,32 @@ approved one-page format (the Marcon version); it is reproduced exactly at
 - **ATS verification:** `pdftotext -layout -enc UTF-8 <pdf> <txt>` and confirm the email, phone
   and LinkedIn appear as literal text, no `(cid:` markers, and heading order matches the page.
 
+
+### Bullet framework: RATS (UBC Sauder)
+
+Every experience bullet is written in **RATS** — Result, Action, Task, Situation. The acronym
+names the four components; the sentence is written in the order below:
+
+1. **Start with a strong past-tense action verb.** Spearheaded, Designed, Rebuilt, Consolidated,
+   Coordinated, Standardized, Prevented. Not "Responsible for", not "Assisted with".
+2. **State the task and situation** — the objective and the context it happened in.
+3. **Finish on the result**, and make it the emphasis. Hard numbers beat adjectives; a
+   qualitative outcome is acceptable only when no number exists.
+
+A bullet that ends on a description of the activity is not finished. "Maintained the schedule
+across 20+ projects, sequencing milestones and approvals" stops at Action. RATS wants the
+consequence: what did the sequencing prevent, save, or produce.
+
+**Confirmed numbers available for results** (everything else is in `VERIFY-BEFORE-SUBMITTING.md`
+and must not be used): 20+ concurrent projects; 15+ trade categories; 143 knowledge-base records
+across 18 controlled fields; 5 reusable template families; promoted within 5 weeks; 800+ financial
+records; 4 warehousing conflicts prevented; 3 overseas order schedules corrected; 2 time zones;
+3 functional groups; ~6-week planning horizon; 60+ students; 100+ volunteers; 40+ tournament
+competitors and ~140 attendees; 2 platform defects identified; 20+ competitors researched.
+
+Reuse the same result across bullets sparingly — a reader who sees "20+ projects" four times
+stops counting it as evidence.
+
 <!-- /ACTIVE-TEMPLATE -->
 
  and Tailoring Guide

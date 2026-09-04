@@ -120,6 +120,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 **Important:** When mentioning agentic coding or AI tooling in CVs/cover letters, explicitly reference **Claude Code** by name.
 
+**CV bullets use the RATS framework** (UBC Sauder: Result, Action, Task, Situation) - a strong past-tense action verb, then the task and situation, ending on the result with the emphasis on the result. See `05-cv-templates.md`.
+
 ## Claim Guardrails (binding - set by the candidate)
 These are hard limits on what may appear in any generated CV, cover letter, or application answer.
 
