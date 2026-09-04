@@ -1,0 +1,12 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "01 珍珠 PEARL", "x": 0, "y": 0, "w": 1000, "h": 1414, "print": "fixed" },
+    { "file": "Wrench.dc.html", "title": "02 扳手 WRENCH", "x": 1100, "y": 0, "w": 1000, "h": 1414, "print": "fixed" },
+    { "file": "Command.dc.html", "title": "03 指挥 COMMAND", "x": 2200, "y": 0, "w": 1000, "h": 1414, "print": "fixed" },
+    { "file": "KnitQueen.dc.html", "title": "04 针织大王 KNIT QUEEN", "x": 3300, "y": 0, "w": 1000, "h": 1414, "print": "fixed" }
+  ],
+  "annotations": [
+    { "id": "note-figures", "x": 0, "y": -170, "w": 520, "text": "四页海报（1000×1414，A 系列比例）。人物是按你设计稿画的简化剪影：主图 = 第一套，贴纸 = 第二套。把你的原画贴进去替换剪影就能用。" }
+  ],
+  "launch": { "view": "canvas" }
+}
