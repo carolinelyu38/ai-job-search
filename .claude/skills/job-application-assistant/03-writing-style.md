@@ -108,3 +108,43 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Default to the language of the job posting
 - Cover letters in the posting's language should feel natural, not translated
 - Slightly warmer, more personal tone may be acceptable in some languages
+
+## Hard style rules (set by the candidate, 2026-09-04)
+
+These apply to every generated document: CVs, cover letters, application answers, outreach
+messages, follow-up notes. They exist because AI-written text has a recognisable signature and a
+recruiter who spots it discounts everything around it.
+
+### Never use
+
+1. **Em dashes and en dashes used as punctuation** (— and –). Use a comma, a colon, a full stop,
+   or brackets. This is the single fastest tell.
+2. **The "not just X, but Y" construction**, and its relatives: "isn't about X, it's about Y",
+   "more than just", "not only... but also".
+3. **The two-sentence dramatic reversal.** "That's not a nice-to-have. That's the job."
+   "Most people stop there. I didn't."
+4. **Rhetorical question followed by its own answer.** "So what changed? Everything."
+5. **Triadic lists as a default rhythm.** Three parallel items in every sentence reads as
+   generated. Vary the count.
+6. **LLM vocabulary**: delve, leverage (as a verb), robust, seamless, landscape, tapestry,
+   testament to, navigate (figurative), unlock, empower, elevate, spearhead, pivotal,
+   crucial, realm, foster, holistic, synergy, dive deep, game-changer, cutting-edge,
+   in today's fast-paced world, at the end of the day.
+7. **Sentence-initial "Moreover", "Furthermore", "Additionally", "Notably".**
+8. **Every bullet opening with the same grammatical shape.** Vary the verb and the structure.
+9. **Hedged filler**: "I believe I would be a strong fit", "I am passionate about",
+   "I am excited about the opportunity to".
+
+### Instead
+
+- Plain declarative sentences. Vary the length; some short.
+- Concrete nouns and specific numbers over adjectives.
+- Ordinary punctuation. A comma or a full stop does the work of an em dash.
+- Say the thing directly. "I run the weekly session" beats "I have had the opportunity to
+  facilitate weekly enablement sessions".
+- One idea per sentence where possible.
+
+### Check before delivering
+
+Search the generated file for the em dash character and for the words in rule 6. Both should
+return nothing.

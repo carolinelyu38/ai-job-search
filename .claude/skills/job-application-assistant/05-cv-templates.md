@@ -2,7 +2,58 @@
 framework_version: 1.4.3
 ---
 
-# CV Templates and Tailoring Guide
+# CV Templates
+
+<!-- ACTIVE-TEMPLATE -->
+## ACTIVE TEMPLATE: ats-resume (HTML + Chromium)
+
+**This supersedes the moderncv/LaTeX instructions below for all CV work.** Caroline supplied an
+approved one-page format (the Marcon version); it is reproduced exactly at
+`templates/ats-resume/example.html` with `templates/ats-resume/style.css`.
+
+- **Source format:** HTML + CSS, not LaTeX. No LaTeX toolchain is assumed.
+- **Build command:** `python3 tools/build_resume.py cv/main_<company>_<role>.html`
+  (headless Chromium print-to-PDF; exits non-zero if the result is not exactly one page)
+- **Page target:** exactly **1 page**, not 2. If a draft overflows, cut a bullet before
+  reaching for `class="tight"` on `<body>`.
+- **Per-application workflow:** copy `templates/ats-resume/example.html` to
+  `cv/main_<company>_<role>.html`, then rewrite **only**: the tagline, the professional summary,
+  the emphasis and keyword choice inside existing bullets, and the skills groupings. Section
+  order, structure and styling do not change.
+- **Never** name client companies, sites or permit numbers. Abstract them the way the approved
+  version does.
+- **ATS verification:** `pdftotext -layout -enc UTF-8 <pdf> <txt>` and confirm the email, phone
+  and LinkedIn appear as literal text, no `(cid:` markers, and heading order matches the page.
+
+
+### Bullet framework: RATS (UBC Sauder)
+
+Every experience bullet is written in **RATS** — Result, Action, Task, Situation. The acronym
+names the four components; the sentence is written in the order below:
+
+1. **Start with a strong past-tense action verb.** Spearheaded, Designed, Rebuilt, Consolidated,
+   Coordinated, Standardized, Prevented. Not "Responsible for", not "Assisted with".
+2. **State the task and situation** — the objective and the context it happened in.
+3. **Finish on the result**, and make it the emphasis. Hard numbers beat adjectives; a
+   qualitative outcome is acceptable only when no number exists.
+
+A bullet that ends on a description of the activity is not finished. "Maintained the schedule
+across 20+ projects, sequencing milestones and approvals" stops at Action. RATS wants the
+consequence: what did the sequencing prevent, save, or produce.
+
+**Confirmed numbers available for results** (everything else is in `VERIFY-BEFORE-SUBMITTING.md`
+and must not be used): 20+ concurrent projects; 15+ trade categories; 143 knowledge-base records
+across 18 controlled fields; 5 reusable template families; promoted within 5 weeks; 800+ financial
+records; 4 warehousing conflicts prevented; 3 overseas order schedules corrected; 2 time zones;
+3 functional groups; ~6-week planning horizon; 60+ students; 100+ volunteers; 40+ tournament
+competitors and ~140 attendees; 2 platform defects identified; 20+ competitors researched.
+
+Reuse the same result across bullets sparingly — a reader who sees "20+ projects" four times
+stops counting it as evidence.
+
+<!-- /ACTIVE-TEMPLATE -->
+
+ and Tailoring Guide
 
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
@@ -52,7 +103,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Caroline Lyu - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -62,13 +113,14 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Caroline}{Lyu}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Richmond, BC, Canada}{}{}
+\phone[mobile]{778-956-1197}
+\email{carolinelyu38@gmail.com}
+% No GitHub on file - if one is added later, append: , \href{URL}{GitHub}
+\extrainfo{\href{https://www.linkedin.com/in/hongxuan-chen-caroline/}{LinkedIn}}
 
 \begin{document}
 \makecvtitle
@@ -130,11 +182,21 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+Adapt these to each posting - they are starting points, not boilerplate. Every factual claim in them is supported by `01-candidate-profile.md`; none uses a figure from `VERIFY-BEFORE-SUBMITTING.md`.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For AI enablement / AI implementation roles (Priority 1):**
+> Operations graduate who builds AI workflows people actually use. At a Vancouver construction and design firm, designed and prototyped an internal multi-agent workflow environment covering quotations, procurement and document generation, built the structured knowledge base behind it (143 records, 18 controlled fields), and created a nine-box enablement framework matching each employee's access level to their AI proficiency to decide who gets templates, recorded demonstrations, group training or one-to-one coaching. Runs weekly AI sessions, and measures success on adoption and correction cycles rather than on tools shipped. Works fluently in Claude Code, Claude, ChatGPT and Copilot, and pairs every workflow with citation, verification and escalation rules.
+
+**For project / program coordination roles (Priority 2):**
+> Project coordinator who keeps many threads moving at once. Coordinated across a portfolio of 20+ commercial construction, renovation and tenant-improvement engagements from pre-construction through permitting, procurement, inspection and closeout, working with clients, consultants, landlords and Strata boards, municipal inspectors, general contractors and specialist trades. Issues RFQs, compares bids on scope and exclusions rather than headline price, prepares landlord-submission packages, and chases stalled approvals to a decision. Promoted from executive assistant to Associate Project Manager within five weeks. Fluent in English and Mandarin.
+
+**For operations / supply chain roles (Priority 3):**
+> UBC Sauder Commerce graduate specialising in Operations and Logistics, with hands-on operations experience on both sides of the supply chain. At Haier Biomedical, consolidated inventory, warehouse, overseas-order and shipment data across SAP and Excel to connect stock position to projected demand over a six-week horizon, preventing four warehousing conflicts and correcting errors in three overseas schedules while coordinating across two time zones. Dispatched drivers and deliveries against live supply constraints at a flooring distributor, and now runs procurement and vendor comparison for a commercial construction portfolio. Builds the reporting and documentation that keeps operations legible.
+
+**For business / data analyst roles (Priority 4 - wider net):**
+> Analyst-minded operations coordinator who turns scattered business information into something people can act on. Built and audited a 143-record internal knowledge base across 18 controlled fields, standardised reporting for three functional groups at Haier Biomedical, and researched 20+ competitors to inform platform improvements at an early-stage recruitment product. Strong Excel (PivotTables, XLOOKUP, dashboards), working SQL and Tableau, and a habit of validating data before drawing conclusions from it.
+>
+> *Honest note for this tier: her data tooling is intermediate. Do not tighten synonyms into "advanced SQL", "data modelling" or "BI development" - leave the gap visible.*
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
