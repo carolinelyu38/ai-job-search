@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik+Mono+One&family=Zen+Dots&family=Noto+Sans+SC:wght@500;900&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #b89d63; }
+    a { color: #ff5a1f; } a:hover { color: #1b1b1b; }
+    .sticker { background: #f4ecd8; color: #1b1b1b; border: 5px solid #f4ecd8; outline: 3px solid #1b1b1b; box-shadow: 6px 8px 0 #1b1b1b; }
+    .callout { position: absolute; font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; font-weight: 900; font-size: 18px; line-height: 1.25; color: #f4ecd8; background: #1b1b1b; padding: 8px 12px; border: 3px solid #f4ecd8; box-shadow: 4px 4px 0 #ff5a1f; }
+    .hazard { background: repeating-linear-gradient(-45deg, #1b1b1b 0 28px, #ffd400 28px 56px); }
+  </style>
+</helmet>
+<div style="position: relative; width: 1000px; height: 1414px; overflow: hidden; background: #b89d63; font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;">
+
+  <!-- blueprint grid -->
+  <div style="position: absolute; inset: 0; background-image: linear-gradient(#8d7646 1px, transparent 1px), linear-gradient(90deg, #8d7646 1px, transparent 1px); background-size: 40px 40px; opacity: 0.5;"></div>
+  <!-- olive torn panel -->
+  <div style="position: absolute; left: 0; top: 0; width: 560px; height: 1414px; background: #4f5a2e; clip-path: polygon(0 0, 100% 0, 92% 6%, 100% 12%, 90% 20%, 98% 28%, 88% 36%, 97% 44%, 90% 52%, 100% 60%, 91% 68%, 98% 76%, 89% 84%, 97% 92%, 92% 100%, 0 100%);"></div>
+
+  <!-- hazard bands -->
+  <div class="hazard" style="position: absolute; left: -40px; top: 0; width: 1100px; height: 34px;"></div>
+  <div class="hazard" style="position: absolute; left: -40px; bottom: 0; width: 1100px; height: 34px;"></div>
+
+  <!-- orange burst -->
+  <svg style="position: absolute; left: -60px; top: 60px;" width="720" height="760" viewBox="0 0 720 760">
+    <polygon points="360,20 400,220 560,80 480,260 700,250 520,370 700,470 490,440 600,660 410,520 360,740 310,530 130,660 250,440 20,470 210,370 20,250 250,260 160,80 320,220" fill="#ff5a1f"/>
+    <polygon points="360,20 400,220 560,80 480,260 700,250 520,370 700,470 490,440 600,660 410,520 360,740 310,530 130,660 250,440 20,470 210,370 20,250 250,260 160,80 320,220" fill="none" stroke="#1b1b1b" stroke-width="6"/>
+  </svg>
+  <div style="position: absolute; left: 0; top: 60px; width: 640px; height: 760px; background: radial-gradient(circle, #1b1b1b 1.5px, transparent 2.2px) 0 0 / 11px 11px; -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 120px, #000 340px, transparent 380px); mask-image: radial-gradient(circle at 50% 50%, transparent 120px, #000 340px, transparent 380px); opacity: 0.6;"></div>
+
+  <!-- MAIN FIGURE: outfit A (khaki workwear, wrapped scarf, goggles) -->
+  <svg style="position: absolute; left: 90px; top: 150px;" width="420" height="896" viewBox="0 0 300 640">
+    <rect x="86" y="560" width="54" height="66" rx="6" fill="#2a1f14"/>
+    <rect x="160" y="560" width="54" height="66" rx="6" fill="#2a1f14"/>
+    <path d="M90 400 L82 572 L142 572 L150 440 L158 572 L218 572 L210 400 Z" fill="#a08c60"/>
+    <path d="M110 430 L104 560 M190 430 L196 560" stroke="#7d6b45" stroke-width="3"/>
+    <rect x="104" y="470" width="30" height="40" fill="#8a7650" stroke="#5c4d33" stroke-width="3"/>
+    <rect x="30" y="236" width="40" height="176" rx="10" fill="#7a6a4a" transform="rotate(8 50 236)"/>
+    <rect x="230" y="236" width="40" height="176" rx="10" fill="#7a6a4a" transform="rotate(-8 250 236)"/>
+    <rect x="18" y="380" width="46" height="36" rx="6" fill="#4a2e1c"/>
+    <rect x="236" y="380" width="46" height="36" rx="6" fill="#4a2e1c"/>
+    <path d="M72 232 L60 420 L240 420 L228 232 Z" fill="#7a6a4a"/>
+    <path d="M150 232 V420" stroke="#5c4d33" stroke-width="4"/>
+    <rect x="84" y="270" width="48" height="52" fill="#8a7a58" stroke="#4d4028" stroke-width="3"/>
+    <rect x="168" y="270" width="48" height="52" fill="#8a7a58" stroke="#4d4028" stroke-width="3"/>
+    <path d="M96 296 h24 M180 296 h24" stroke="#ffd400" stroke-width="4"/>
+    <path d="M186 340 l14 -6 l6 12 l-14 6 z" fill="#f3d27a" stroke="#1b1b1b" stroke-width="2"/>
+    <path d="M110 232 L130 250 L150 236 L170 250 L190 232 Z" fill="#d8ccb2"/>
+    <rect x="60" y="396" width="180" height="24" fill="#111"/>
+    <rect x="136" y="392" width="28" height="32" rx="3" fill="#cfcfcf" stroke="#111" stroke-width="3"/>
+    <circle cx="150" cy="150" r="66" fill="#6b5a45"/>
+    <path d="M90 118 C120 100 180 100 210 118 M84 176 C120 196 180 196 216 176 M96 200 C130 224 170 224 204 200" stroke="#57482f" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M118 150 h64" stroke="#c98f6c" stroke-width="18" stroke-linecap="round"/>
+    <rect x="98" y="118" width="104" height="38" rx="16" fill="#111" stroke="#2a2a2a" stroke-width="3"/>
+    <circle cx="125" cy="137" r="13" fill="#d8d8d8"/>
+    <circle cx="175" cy="137" r="13" fill="#d8d8d8"/>
+    <circle cx="121" cy="133" r="4" fill="#fff"/>
+    <circle cx="171" cy="133" r="4" fill="#fff"/>
+  </svg>
+
+  <!-- stacked headline -->
+  <div style="position: absolute; left: 560px; top: 180px; display: flex; flex-direction: column; align-items: flex-start; gap: 0; font-family: 'Anton', Impact, sans-serif; font-size: 124px; line-height: 0.86; color: #1b1b1b; letter-spacing: -3px;">
+    <div style="color: #f4ecd8; -webkit-text-stroke: 4px #1b1b1b;">FIX</div>
+    <div style="color: #1b1b1b;">CLIMB</div>
+    <div style="color: #ff5a1f; -webkit-text-stroke: 4px #1b1b1b;">REPEAT</div>
+  </div>
+  <div style="position: absolute; left: 566px; top: 560px; font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; font-weight: 900; font-size: 84px; line-height: 1; color: #1b1b1b; letter-spacing: 6px;">扳手</div>
+  <div style="position: absolute; left: 570px; top: 662px; font-family: 'Zen Dots', Impact, sans-serif; font-size: 18px; letter-spacing: 6px; color: #1b1b1b;">WRENCH · MECHANIC</div>
+
+  <!-- page number -->
+  <div style="position: absolute; right: 40px; top: 60px; display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <div style="font-family: 'Zen Dots', Impact, sans-serif; font-size: 96px; line-height: 1; color: #ffd400; -webkit-text-stroke: 3px #1b1b1b;">02</div>
+    <div style="font-family: 'Zen Dots', Impact, sans-serif; font-size: 16px; letter-spacing: 6px; color: #1b1b1b;">/ 04 · WASTELAND</div>
+  </div>
+
+  <!-- gear + wrench graphics -->
+  <svg style="position: absolute; left: 720px; top: 700px;" width="230" height="230" viewBox="0 0 260 260">
+    <g transform="translate(130 130)">
+      <path d="M-18 -120 h36 l6 24 l22 10 l22 -12 l26 26 l-12 22 l10 22 l24 6 v36 l-24 6 l-10 22 l12 22 l-26 26 l-22 -12 l-22 10 l-6 24 h-36 l-6 -24 l-22 -10 l-22 12 l-26 -26 l12 -22 l-10 -22 l-24 -6 v-36 l24 -6 l10 -22 l-12 -22 l26 -26 l22 12 l22 -10 z" fill="#ffd400" stroke="#1b1b1b" stroke-width="6"/>
+      <circle r="40" fill="#b89d63" stroke="#1b1b1b" stroke-width="6"/>
+    </g>
+  </svg>
+  <svg style="position: absolute; left: 590px; top: 870px; transform: rotate(-30deg);" width="300" height="90" viewBox="0 0 300 90">
+    <path d="M40 30 h190 v30 h-190 z" fill="#d9d9d9" stroke="#1b1b1b" stroke-width="5"/>
+    <path d="M10 10 a40 40 0 1 0 0 70 l20 -14 v-42 z" fill="#d9d9d9" stroke="#1b1b1b" stroke-width="5"/>
+    <path d="M290 10 a40 40 0 1 1 0 70 l-20 -14 v-42 z" fill="#d9d9d9" stroke="#1b1b1b" stroke-width="5"/>
+  </svg>
+
+  <!-- callouts -->
+  <div class="callout" style="left: 40px; top: 300px;">做机械时<br>保护眼睛</div>
+  <svg style="position: absolute; left: 160px; top: 310px;" width="80" height="40" viewBox="0 0 80 40"><path d="M4 12 L70 30" stroke="#f4ecd8" stroke-width="3"/><circle cx="70" cy="30" r="5" fill="#f4ecd8"/></svg>
+  <div class="callout" style="left: 380px; top: 520px; width: 150px;">纯手工工装<br>面料被精心修补</div>
+  <div class="callout" style="left: 30px; top: 720px; width: 130px;">需要灵活变换<br>在基地爬上爬下</div>
+  <div class="callout" style="left: 420px; top: 800px;">珠宝夹子<br>作为装饰</div>
+  <svg style="position: absolute; left: 350px; top: 640px;" width="80" height="170" viewBox="0 0 80 170"><path d="M8 6 L60 160" stroke="#f4ecd8" stroke-width="3"/><circle cx="8" cy="6" r="5" fill="#f4ecd8"/></svg>
+
+  <!-- patch stickers -->
+  <div class="sticker" style="position: absolute; left: 380px; top: 100px; padding: 10px 14px; transform: rotate(8deg); font-family: 'Rubik Mono One', Impact, sans-serif; font-size: 20px; line-height: 1;">MENDED ×3</div>
+  <div style="position: absolute; left: 400px; top: 1160px; padding: 10px 18px; transform: rotate(-4deg); background: #ff5a1f; color: #1b1b1b; border: 4px solid #1b1b1b; font-family: 'Rubik Mono One', Impact, sans-serif; font-size: 30px; line-height: 1; letter-spacing: 2px; box-shadow: 6px 6px 0 #1b1b1b;">CAUTION</div>
+
+  <!-- outfit B sticker: black tactical -->
+  <div class="sticker" style="position: absolute; left: 690px; top: 990px; width: 250px; height: 300px; transform: rotate(-3deg); overflow: hidden; background: #4f5a2e;">
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(#3b4522 1px, transparent 1px), linear-gradient(90deg, #3b4522 1px, transparent 1px); background-size: 20px 20px;"></div>
+    <svg style="position: absolute; left: 30px; top: -6px;" width="190" height="405" viewBox="0 0 300 640">
+      <defs>
+        <pattern id="mesh" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 4 h8 M4 0 v8" stroke="#6a6a6a" stroke-width="1.5"/></pattern>
+      </defs>
+      <rect x="88" y="556" width="54" height="70" rx="6" fill="#0a0a0a" stroke="#555" stroke-width="3"/>
+      <rect x="158" y="556" width="54" height="70" rx="6" fill="#0a0a0a" stroke="#555" stroke-width="3"/>
+      <path d="M92 420 L84 570 L144 570 L150 450 L156 570 L216 570 L208 420 Z" fill="#161616"/>
+      <rect x="36" y="250" width="42" height="180" rx="10" fill="#101010" transform="rotate(10 57 250)"/>
+      <rect x="222" y="250" width="42" height="180" rx="10" fill="#101010" transform="rotate(-10 243 250)"/>
+      <path d="M78 240 L40 300 L82 322 L112 252 Z" fill="#2b2b2b" stroke="#8a8a8a" stroke-width="4"/>
+      <path d="M222 240 L260 300 L218 322 L188 252 Z" fill="#2b2b2b" stroke="#8a8a8a" stroke-width="4"/>
+      <rect x="88" y="240" width="124" height="200" fill="#101010"/>
+      <rect x="98" y="300" width="42" height="48" fill="#1c1c1c" stroke="#555" stroke-width="3"/>
+      <rect x="160" y="300" width="42" height="48" fill="#1c1c1c" stroke="#555" stroke-width="3"/>
+      <rect x="98" y="370" width="104" height="50" fill="#1c1c1c" stroke="#555" stroke-width="3"/>
+      <path d="M88 250 L212 440 M212 250 L88 440" stroke="#333" stroke-width="10"/>
+      <path d="M150 40 C100 50 80 100 82 180 L96 244 L204 244 L218 180 C220 100 200 50 150 40 Z" fill="#141414"/>
+      <ellipse cx="150" cy="150" rx="40" ry="52" fill="#3a3a3a"/>
+      <ellipse cx="150" cy="150" rx="40" ry="52" fill="url(#mesh)"/>
+      <rect x="108" y="120" width="84" height="20" fill="#0a0a0a" stroke="#777" stroke-width="3"/>
+    </svg>
+    <div style="position: absolute; left: 10px; bottom: 10px; font-family: 'Zen Dots', Impact, sans-serif; font-size: 14px; letter-spacing: 3px; color: #f4ecd8;">LOOK 02 · 皮革战术服</div>
+  </div>
+  <div class="callout" style="left: 520px; top: 1060px; width: 150px;">材料很硬<br>不易活动</div>
+
+  <!-- footer -->
+  <div style="position: absolute; left: 0; right: 0; bottom: 34px; height: 46px; background: #1b1b1b; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; font-family: 'Zen Dots', Impact, sans-serif; font-size: 14px; letter-spacing: 5px; color: #f4ecd8;">
+    <span>末世废土 · UNDERGROUND STREET</span>
+    <span>CHARACTER 02 · 扳手 WRENCH</span>
+  </div>
+
+  <!-- grain -->
+  <svg style="position: absolute; inset: 0; mix-blend-mode: multiply; opacity: 0.18; pointer-events: none;" width="1000" height="1414">
+    <filter id="grainW"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+    <rect width="1000" height="1414" filter="url(#grainW)"/>
+  </svg>
+</div>
+</x-dc>
+</body>
+</html>

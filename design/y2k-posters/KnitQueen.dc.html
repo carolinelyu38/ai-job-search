@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Rubik+Mono+One&family=Zen+Dots&family=Noto+Sans+SC:wght@500;900&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #ff2fb0; }
+    a { color: #b6ff2e; } a:hover { color: #ffffff; }
+    .sticker { background: #fff5fb; color: #2a0a3a; border: 5px solid #fff5fb; outline: 3px solid #2a0a3a; box-shadow: 6px 8px 0 #2a0a3a; }
+    .callout { position: absolute; font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; font-weight: 900; font-size: 18px; line-height: 1.25; color: #2a0a3a; background: #b6ff2e; padding: 8px 12px; border: 3px solid #2a0a3a; box-shadow: 4px 4px 0 #ff7a00; }
+    .knit { background: repeating-linear-gradient(45deg, #ff2fb0 0 14px, #e0169a 14px 28px), repeating-linear-gradient(-45deg, transparent 0 14px, #ffffff22 14px 28px); }
+  </style>
+</helmet>
+<div style="position: relative; width: 1000px; height: 1414px; overflow: hidden; background: #ff2fb0; font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;">
+
+  <!-- knit ground + colour blocks -->
+  <div class="knit" style="position: absolute; inset: 0;"></div>
+  <div style="position: absolute; left: 0; top: 0; width: 1000px; height: 1414px; background: #6a2bd9; clip-path: polygon(0 0, 55% 0, 40% 100%, 0 100%);"></div>
+  <div style="position: absolute; left: 0; top: 0; width: 1000px; height: 1414px; background: #ff7a00; clip-path: polygon(70% 100%, 100% 100%, 100% 55%);"></div>
+  <div style="position: absolute; right: 0; top: 0; width: 520px; height: 520px; background: radial-gradient(circle, #2a0a3a 1.6px, transparent 2.3px) 0 0 / 12px 12px; -webkit-mask-image: radial-gradient(circle at 100% 0%, #000 60px, transparent 420px); mask-image: radial-gradient(circle at 100% 0%, #000 60px, transparent 420px); opacity: 0.5;"></div>
+
+  <!-- lime burst -->
+  <svg style="position: absolute; left: 120px; top: 260px;" width="760" height="820" viewBox="0 0 760 820">
+    <polygon points="380,20 430,240 600,90 520,300 740,280 560,420 740,560 520,520 640,780 440,600 380,800 320,600 120,780 240,520 20,560 200,420 20,280 240,300 160,90 330,240" fill="#b6ff2e"/>
+    <polygon points="380,20 430,240 600,90 520,300 740,280 560,420 740,560 520,520 640,780 440,600 380,800 320,600 120,780 240,520 20,560 200,420 20,280 240,300 160,90 330,240" fill="none" stroke="#2a0a3a" stroke-width="6"/>
+  </svg>
+
+  <!-- headline -->
+  <div style="position: absolute; left: 40px; top: 50px; font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; font-weight: 900; font-size: 150px; line-height: 1; color: #fff5fb; -webkit-text-stroke: 4px #2a0a3a; text-shadow: 10px 10px 0 #2a0a3a;">100件</div>
+  <div style="position: absolute; left: 44px; top: 210px; font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; font-weight: 900; font-size: 64px; line-height: 1; color: #2a0a3a;">废土也要穿的高定</div>
+  <div style="position: absolute; left: 44px; top: 290px; font-family: 'Bungee', Impact, sans-serif; font-size: 26px; letter-spacing: 3px; color: #b6ff2e; background: #2a0a3a; padding: 6px 14px; display: inline-block; transform: rotate(-2deg);">NEVER GOES OUT · 并不用出门</div>
+
+  <!-- page number -->
+  <div style="position: absolute; right: 40px; top: 44px; display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <div style="font-family: 'Zen Dots', Impact, sans-serif; font-size: 96px; line-height: 1; color: #ff7a00; -webkit-text-stroke: 3px #2a0a3a;">04</div>
+    <div style="font-family: 'Zen Dots', Impact, sans-serif; font-size: 16px; letter-spacing: 6px; color: #fff5fb;">/ 04 · WASTELAND</div>
+  </div>
+
+  <!-- MAIN FIGURE: outfit A (black fluffy hood, purple visor, leaf knit dress, yellow bag) -->
+  <svg style="position: absolute; left: 290px; top: 330px;" width="440" height="940" viewBox="0 0 300 640">
+    <defs>
+      <filter id="furK" x="-30%" y="-30%" width="160%" height="160%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="3" seed="11" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <pattern id="chev" width="16" height="12" patternUnits="userSpaceOnUse"><path d="M0 12 L8 0 L16 12" stroke="#e0169a" stroke-width="3" fill="none"/></pattern>
+    </defs>
+    <ellipse cx="112" cy="600" rx="40" ry="26" fill="#d9b978" filter="url(#furK)"/>
+    <ellipse cx="190" cy="600" rx="40" ry="26" fill="#d9b978" filter="url(#furK)"/>
+    <path d="M96 470 L90 590 L136 590 L146 480 L156 590 L210 590 L204 470 Z" fill="#c9a0e8"/>
+    <path d="M86 240 L58 560 L242 560 L214 240 Z" fill="#ff4fb8"/>
+    <path d="M86 240 L58 560 L242 560 L214 240 Z" fill="url(#chev)"/>
+    <path d="M100 330 C120 290 150 300 150 340 C130 350 110 350 100 330 Z" fill="#39b54a" stroke="#2a0a3a" stroke-width="2"/>
+    <path d="M200 400 C180 360 150 370 150 410 C170 420 190 420 200 400 Z" fill="#39b54a" stroke="#2a0a3a" stroke-width="2"/>
+    <path d="M90 470 C110 430 140 440 140 480 C120 490 100 490 90 470 Z" fill="#39b54a" stroke="#2a0a3a" stroke-width="2"/>
+    <path d="M220 510 C200 470 170 480 170 520 C190 530 210 530 220 510 Z" fill="#39b54a" stroke="#2a0a3a" stroke-width="2"/>
+    <path d="M100 330 L150 340 M200 400 L150 410 M90 470 L140 480 M220 510 L170 520" stroke="#2a0a3a" stroke-width="2"/>
+    <rect x="30" y="250" width="44" height="170" rx="12" fill="#ff4fb8" transform="rotate(10 52 250)"/>
+    <rect x="226" y="250" width="44" height="170" rx="12" fill="#ff4fb8" transform="rotate(-10 248 250)"/>
+    <ellipse cx="30" cy="428" rx="30" ry="20" fill="#d9b978" filter="url(#furK)"/>
+    <ellipse cx="270" cy="428" rx="30" ry="20" fill="#d9b978" filter="url(#furK)"/>
+    <circle cx="26" cy="446" r="4" fill="#ffffff"/><circle cx="40" cy="452" r="3" fill="#ffffff"/><circle cx="262" cy="448" r="4" fill="#ffffff"/><circle cx="276" cy="454" r="3" fill="#ffffff"/>
+    <path d="M196 250 L230 380" stroke="#2a0a3a" stroke-width="6"/>
+    <rect x="200" y="370" width="66" height="48" rx="8" fill="#f4b400" stroke="#2a0a3a" stroke-width="4"/>
+    <circle cx="150" cy="118" r="92" fill="#141018" filter="url(#furK)"/>
+    <ellipse cx="150" cy="182" rx="34" ry="30" fill="#b98a66"/>
+    <rect x="102" y="138" width="96" height="30" rx="12" fill="#5b21d6" stroke="#2a0a3a" stroke-width="3"/>
+    <path d="M114 148 h34" stroke="#c9a0e8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M138 198 q12 8 24 0" stroke="#7a3b2f" stroke-width="3" fill="none"/>
+  </svg>
+
+  <!-- callouts -->
+  <div class="callout" style="left: 720px; top: 360px; width: 130px;">尽情享受<br>毛茸茸</div>
+  <svg style="position: absolute; left: 640px; top: 380px;" width="90" height="40" viewBox="0 0 90 40"><path d="M86 20 L8 8" stroke="#2a0a3a" stroke-width="3"/><circle cx="8" cy="8" r="5" fill="#2a0a3a"/></svg>
+  <div class="callout" style="left: 120px; top: 640px; width: 140px;">针织大王来了<br>（内置皮革）</div>
+  <svg style="position: absolute; left: 260px; top: 660px;" width="90" height="40" viewBox="0 0 90 40"><path d="M4 12 L80 30" stroke="#2a0a3a" stroke-width="3"/><circle cx="80" cy="30" r="5" fill="#2a0a3a"/></svg>
+  <div class="callout" style="left: 740px; top: 880px;">手摇亮片</div>
+  <div class="callout" style="left: 120px; top: 900px; width: 120px;">依旧毛毛<br>保暖裤</div>
+  <div class="callout" style="left: 720px; top: 700px; width: 150px;">修理机械时<br>护目镜 · 同样防沙</div>
+
+  <!-- flowers + sequins -->
+  <svg style="position: absolute; left: 0; top: 0;" width="1000" height="1414" viewBox="0 0 1000 1414">
+    <g transform="translate(860 560)">
+      <circle cx="0" cy="-34" r="20" fill="#ff7a00" stroke="#2a0a3a" stroke-width="3"/><circle cx="32" cy="-10" r="20" fill="#ff7a00" stroke="#2a0a3a" stroke-width="3"/><circle cx="20" cy="28" r="20" fill="#ff7a00" stroke="#2a0a3a" stroke-width="3"/><circle cx="-20" cy="28" r="20" fill="#ff7a00" stroke="#2a0a3a" stroke-width="3"/><circle cx="-32" cy="-10" r="20" fill="#ff7a00" stroke="#2a0a3a" stroke-width="3"/><circle r="16" fill="#fff5fb" stroke="#2a0a3a" stroke-width="3"/>
+    </g>
+    <g transform="translate(150 1120) scale(0.8)">
+      <circle cx="0" cy="-34" r="20" fill="#b6ff2e" stroke="#2a0a3a" stroke-width="3"/><circle cx="32" cy="-10" r="20" fill="#b6ff2e" stroke="#2a0a3a" stroke-width="3"/><circle cx="20" cy="28" r="20" fill="#b6ff2e" stroke="#2a0a3a" stroke-width="3"/><circle cx="-20" cy="28" r="20" fill="#b6ff2e" stroke="#2a0a3a" stroke-width="3"/><circle cx="-32" cy="-10" r="20" fill="#b6ff2e" stroke="#2a0a3a" stroke-width="3"/><circle r="16" fill="#fff5fb" stroke="#2a0a3a" stroke-width="3"/>
+    </g>
+    <path d="M760 200 C768 240 776 248 816 256 C776 264 768 272 760 312 C752 272 744 264 704 256 C744 248 752 240 760 200 Z" fill="#fff5fb" stroke="#2a0a3a" stroke-width="3"/>
+    <path d="M240 420 C245 445 250 450 275 455 C250 460 245 465 240 490 C235 465 230 460 205 455 C230 450 235 445 240 420 Z" fill="#ff7a00" stroke="#2a0a3a" stroke-width="3"/>
+    <g fill="#fff5fb" stroke="#2a0a3a" stroke-width="2">
+      <circle cx="600" cy="1220" r="7"/><circle cx="630" cy="1250" r="5"/><circle cx="580" cy="1270" r="6"/><circle cx="660" cy="1210" r="4"/><circle cx="700" cy="1260" r="7"/><circle cx="640" cy="1300" r="5"/>
+    </g>
+  </svg>
+
+  <!-- outfit B sticker: orange tweed jacket, pink skirt, brown fur hat -->
+  <div class="sticker" style="position: absolute; left: 700px; top: 960px; width: 250px; height: 310px; transform: rotate(-4deg); overflow: hidden; background: #6a2bd9;">
+    <div style="position: absolute; inset: 0; background: repeating-linear-gradient(45deg, #6a2bd9 0 10px, #5a21c4 10px 20px);"></div>
+    <svg style="position: absolute; left: 30px; top: -6px;" width="190" height="405" viewBox="0 0 300 640">
+      <defs>
+        <filter id="furK2" x="-30%" y="-30%" width="160%" height="160%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" seed="4" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <pattern id="tweed" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 0 L10 10 M10 0 L0 10" stroke="#e8600a" stroke-width="2"/></pattern>
+        <pattern id="diam" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 0 L20 10 L10 20 L0 10 Z" fill="none" stroke="#ff2fb0" stroke-width="2"/></pattern>
+      </defs>
+      <rect x="92" y="574" width="52" height="60" rx="6" fill="#2a0a3a"/>
+      <rect x="156" y="574" width="52" height="60" rx="6" fill="#2a0a3a"/>
+      <path d="M72 400 L56 590 L244 590 L228 400 Z" fill="#ff5fb3"/>
+      <path d="M72 400 L56 590 L244 590 L228 400 Z" fill="url(#diam)"/>
+      <path d="M56 430 L244 470 L244 510 L56 470 Z" fill="#ffb020" stroke="#2a0a3a" stroke-width="3"/>
+      <rect x="28" y="244" width="44" height="160" rx="12" fill="#ff7a1a" transform="rotate(10 50 244)"/>
+      <rect x="228" y="244" width="44" height="160" rx="12" fill="#ff7a1a" transform="rotate(-10 250 244)"/>
+      <path d="M76 232 L62 404 L238 404 L224 232 Z" fill="#ff7a1a"/>
+      <path d="M76 232 L62 404 L238 404 L224 232 Z" fill="url(#tweed)"/>
+      <circle cx="150" cy="270" r="7" fill="#2a0a3a"/><circle cx="150" cy="310" r="7" fill="#2a0a3a"/><circle cx="150" cy="350" r="7" fill="#2a0a3a"/>
+      <rect x="62" y="232" width="176" height="12" fill="#2a0a3a"/>
+      <circle cx="150" cy="120" r="80" fill="#6b3a1e" filter="url(#furK2)"/>
+      <ellipse cx="150" cy="182" rx="32" ry="28" fill="#b98a66"/>
+      <rect x="104" y="140" width="92" height="28" rx="12" fill="#5b21d6" stroke="#2a0a3a" stroke-width="3"/>
+      <path d="M116 150 h30" stroke="#c9a0e8" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <div style="position: absolute; left: 10px; bottom: 10px; font-family: 'Zen Dots', Impact, sans-serif; font-size: 14px; letter-spacing: 3px; color: #fff5fb;">LOOK 02 · 小香风 · 羊绒</div>
+  </div>
+
+  <!-- title sticker -->
+  <div class="sticker" style="position: absolute; left: 60px; top: 1200px; padding: 12px 18px; transform: rotate(3deg); display: flex; flex-direction: column; gap: 4px;">
+    <div style="font-family: 'Rubik Mono One', Impact, sans-serif; font-size: 34px; line-height: 1; color: #2a0a3a;">KNIT QUEEN</div>
+    <div style="font-family: 'Noto Sans SC', sans-serif; font-weight: 900; font-size: 24px; line-height: 1; color: #ff2fb0;">针织大王</div>
+  </div>
+
+  <!-- footer -->
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 46px; background: #2a0a3a; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; font-family: 'Zen Dots', Impact, sans-serif; font-size: 14px; letter-spacing: 5px; color: #fff5fb;">
+    <span>末世废土 · UNDERGROUND STREET</span>
+    <span>CHARACTER 04 · 针织大王 KNIT QUEEN</span>
+  </div>
+
+  <!-- grain -->
+  <svg style="position: absolute; inset: 0; mix-blend-mode: multiply; opacity: 0.14; pointer-events: none;" width="1000" height="1414">
+    <filter id="grainK"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+    <rect width="1000" height="1414" filter="url(#grainK)"/>
+  </svg>
+</div>
+</x-dc>
+</body>
+</html>
